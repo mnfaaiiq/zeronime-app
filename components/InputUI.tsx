@@ -7,7 +7,7 @@ import { CiSearch } from "react-icons/ci";
 import { useRouter } from "next/navigation";
 
 const InputUI = () => {
-  const searchRef = useRef();
+  const searchRef: any = useRef();
   const router = useRouter();
 
   const handleSearch = (event: React.FormEvent) => {

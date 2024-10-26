@@ -8,6 +8,7 @@ import Link from "next/link";
 import { Button } from "@/components/ui/button";
 import { ArrowLeft, ChevronLeftCircle, ChevronLeftIcon } from "lucide-react";
 import { getAnimeResponse } from "@/lib/api-libs";
+import { Pagination } from "@/components/ui/pagination";
 
 type Pagination = {
   last_visible_page: number;
@@ -16,7 +17,7 @@ type Pagination = {
 
 const Page = () => {
   const [page, setPage] = useState(1);
-  const [topAnime, setTopAnime] = useState([]);
+  const [topAnime, setTopAnime]: any = useState([]);
 
   const fetchData = async () => {
     const popularAnime = await getAnimeResponse("top/anime", `page=${page}`);
