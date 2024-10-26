@@ -36,7 +36,7 @@ const ItemCard = ({ api }: any) => {
               )}
             </CardHeader>
             <CardContent>
-              <Link href={`/${anime.mal_id}`}>
+              <Link href={`anime/${anime.mal_id}`}>
                 <Image
                   src={anime.images.jpg.image_url}
                   alt={anime.title}
