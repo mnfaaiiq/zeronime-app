@@ -5,7 +5,7 @@ import React, { useState } from "react";
 import { IoClose } from "react-icons/io5";
 import YouTube from "react-youtube";
 
-const VideoPlayer = ({ youtubeId }) => {
+const VideoPlayer = ({ youtubeId }: any) => {
   const [isOpen, setIsOpen] = useState(true);
   const handleVideoPlayer = () => {
     setIsOpen((prev) => !prev);
@@ -24,7 +24,7 @@ const VideoPlayer = ({ youtubeId }) => {
         </Button>
         <YouTube
           videoId={youtubeId}
-          onReady={(event) => event.target.pauseVideo()}
+          onReady={(event: any) => event.target.pauseVideo()}
           opts={option}
         />
       </div>

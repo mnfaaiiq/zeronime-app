@@ -9,6 +9,11 @@ import { Button } from "@/components/ui/button";
 import { ArrowLeft, ChevronLeftCircle, ChevronLeftIcon } from "lucide-react";
 import { getAnimeResponse } from "@/lib/api-libs";
 
+type Pagination = {
+  last_visible_page: number;
+  has_next_page: boolean;
+};
+
 const Page = () => {
   const [page, setPage] = useState(1);
   const [topAnime, setTopAnime] = useState([]);
@@ -31,7 +36,7 @@ const Page = () => {
       <ItemCard api={topAnime} />
       <Paginasi
         page={page}
-        lastPage={topAnime.pagination?.last_visible_page}
+        lastPage={topAnime.pagination?.last_visible_page ?? 1}
         setPage={setPage}
       />
     </>

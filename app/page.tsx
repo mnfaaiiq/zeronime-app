@@ -12,7 +12,7 @@ export default async function Home() {
 
   return (
     <div className="flex flex-col bg-zinc-950">
-      <InputUI api={TopAnime} />
+      <InputUI />
       {/* Popular Anime */}
       <section>
         <Header title="Top Anime" linkTitle="see All" linkHref="/popular" />

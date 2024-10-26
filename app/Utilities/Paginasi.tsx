@@ -8,17 +8,23 @@ import {
   PaginationPrevious,
 } from "@/components/ui/pagination";
 
-const Paginasi = ({ page, lastPage, setPage }: any) => {
+type PaginationProps = {
+  page: number;
+  lastPage: number;
+  setPage: React.Dispatch<React.SetStateAction<number>>;
+};
+
+const Paginasi = ({ page, lastPage, setPage }: PaginationProps) => {
   const scrollTop = () => {
     scrollTo({ top: 0, behavior: "smooth" });
   };
   const handleNextPage = () => {
-    setPage((prev) => prev + 1);
+    setPage((prev: number) => prev + 1);
     scrollTop();
   };
 
   const handlePreviousPage = () => {
-    setPage((prev) => prev - 1);
+    setPage((prev: number) => prev - 1);
     scrollTop();
   };
   return (
